@@ -6,7 +6,6 @@ var app = express()
 var bodyParser = require('body-parser');
 var request = require('request')
 var http = require('http')
-var https = require('https')
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -18,15 +17,13 @@ app.use(express.static(__dirname));
 //     next();
 // });
 
-app.get('/indeed',(req, res) => {
-  request(`http://api.indeed.com/ads/apisearch?publisher=${process.env.INDEED_ID}&q=java&l=austin%2C+tx&sort=&radius=&st=&jt=&start=&limit=&fromage=&filter=&latlong=1&co=us&chnl=&userip=1.2.3.4&useragent=Mozilla/%2F4.0%28Firefox%29&v=2`, (err, res, body) => {
-    console.log('error:', err); // Print the error if one occurred
-    console.log('statusCode:', res && res.statusCode); // Print the response status code if a response was received
+app.get('/indeed',(req, response) => {
+  request(`http://api.indeed.com/ads/apisearch?publisher=${process.env.INDEED_ID}&q=java&l=austin%2C+tx&sort=&radius=&st=&jt=&start=&limit=&fromage=&filter=&latlong=1&co=us&chnl=&userip=1.2.3.4&useragent=Chrome/31.0.1650.63&v=2`, (err, res, body) => {
+    response.send(parser.toJson(body))
     console.log('body:', parser.toJson(body));
   })
-})
 
-//});
+})
 
 app.listen(8080), () => {
     console.log('server running..')
