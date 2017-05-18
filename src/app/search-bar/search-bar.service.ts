@@ -10,13 +10,15 @@ export class SearchBarService {
 
   constructor (private http: Http) {}
 
-  searchLocation(city) {
-    return this.http.get(`http://localhost:8080/indeed/${city}`)
+  searchLocation(city,keyword) {
+    return this.http.get(`http://localhost:8080/indeed/${city}/${keyword}`)
       .map(res => res.json())
   }
 
-  searchKeyword(keyword) {
-    console.log(keyword);
-  }
+  // searchKeyword(keyword) {
+  //   console.log(keyword);
+  //   return this.http.get(`http://localhost:8080/indeed/${keyword}`)
+  //     .map(res => res.json())
+  // }
 
 }

@@ -14,9 +14,9 @@ export class SearchBarComponent implements OnInit {
 
   constructor(private searchService: SearchBarService) {}
 
-  lookupJobs(city) {
-    console.log(city)
-    this.searchService.searchLocation(city)
+  lookupJobs(city, keyword) {
+    console.log(city, keyword)
+    this.searchService.searchLocation(city, keyword)
       .subscribe(res => {this.jobs = res.response.results.result, console.log(res)})
   }
 
