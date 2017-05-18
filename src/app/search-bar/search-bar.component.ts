@@ -8,8 +8,8 @@ import { SearchBarService } from './search-bar.service';
   providers: [SearchBarService]
 })
 export class SearchBarComponent implements OnInit {
-  location: string = "austin";
-  keyword: string = "developer";
+  location: string = "";
+  keyword: string = "";
   jobs: Object[] = []
 
   constructor(private searchService: SearchBarService) {}
