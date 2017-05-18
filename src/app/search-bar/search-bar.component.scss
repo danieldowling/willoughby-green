@@ -1,0 +1,71 @@
+$grey: grey;
+$grey2: slategrey;
+$ghost: ghostwhite;
+
+.search-content {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  width: 100%;
+}
+
+.search-input {
+  color: $grey;
+}
+
+.search-results {
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  border: 1px solid grey;
+  border-radius: 2px;
+  margin: 10px;
+  padding: 10px;
+  background-color: $ghost;
+  color: $grey;
+}
+
+ul li h2 {
+  color: $grey;
+}
+
+ul li h3 {
+  margin: 6px;
+  color: $grey2;
+}
+
+ul li p {
+  margin: 10px;
+  color: $grey2;
+}
+
+label {
+  font-size: 16px;
+}
+
+input {
+  padding: 4px;
+  font-size: 16px;
+  width: 50%;
+  color: $grey2;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid grey;
+  width: 50%;
+  background-color: ghostwhite;
+  // background-color: lightblue;
+  color: $grey;
+  font-size: 14px;
+  &:hover {
+    background-color: lightblue;
+    color: white;
+  }
+
+}

@@ -1,5 +1,24 @@
-<h1>{{test}}</h1>
-
-<div>
-  <input [(ngModel)]=test type="text" value="Enter">
+<div class="search-content">
+  <div class="search-input">
+      <div>
+        <label for="location">Enter Location</label><br>
+        <input [(ngModel)]=location type="text">
+      </div>
+      <br>
+      <div>
+        <label for="keyword">Enter Keyword</label><br>
+        <input [(ngModel)]=keyword type="text">
+      </div>
+      <br>
+      <button type="submit" (click)="lookupJobs(location)">Search</button>
+    </div>
+    <div class="search-results">
+      <ul>
+        <li *ngFor="let job of jobs">
+          <h2>Company: {{job.company}}</h2>
+          <h3>Job Title: {{job.jobtitle}}</h3>
+          <p>Description: {{job.snippet}}</p>
+        </li>
+      </ul>
+    </div>
 </div>

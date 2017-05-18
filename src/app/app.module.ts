@@ -6,17 +6,20 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppService } from './app.service';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { JobsListComponent } from './jobs-list/jobs-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    JobsListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    JsonpModule
+    JsonpModule,
+    HttpModule
   ],
   providers: [
     AppService

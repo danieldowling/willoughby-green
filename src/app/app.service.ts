@@ -8,9 +8,5 @@ export class AppService {
 
   constructor(private http: Http) { }
 
-  serverTest() {
-    return this.http.get('http://localhost:8080/indeed')
-      .map(res => res.json())
-  }
 
 }

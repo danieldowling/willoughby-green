@@ -1,15 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchBarService } from './search-bar.service';
 
 @Component({
   selector: 'app-search-bar',
   templateUrl: './search-bar.component.html',
-  styleUrls: ['./search-bar.component.scss']
+  styleUrls: ['./search-bar.component.scss'],
+  providers: [SearchBarService]
 })
 export class SearchBarComponent implements OnInit {
+  location: string = "austin";
+  keyword: string = "developer";
+  jobs: Object[] = []
 
-test: string = "hello";
+  constructor(private searchService: SearchBarService) {}
 
-  constructor() { }
+  lookupJobs(city) {
+    console.log(city)
+    this.searchService.searchLocation(city)
+      .subscribe(res => {this.jobs = res.response.results.result, console.log(res)})
+  }
 
   ngOnInit() {
   }

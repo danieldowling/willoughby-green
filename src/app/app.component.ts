@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { AppService } from './app.service';
-import { SearchBarComponent } from './search-bar/search-bar.component'
+import { SearchBarComponent } from './search-bar/search-bar.component';
+
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 
 
@@ -15,9 +17,7 @@ export class AppComponent {
   private person: string = ''
 
   constructor(private appService: AppService) {
-
-    this.appService.serverTest()
-      .subscribe(res => console.log(res))
-
   }
+
+
 }
