@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms'
 import { SearchBarService } from './search-bar.service';
 
 @Component({
@@ -8,19 +9,29 @@ import { SearchBarService } from './search-bar.service';
   providers: [SearchBarService]
 })
 export class SearchBarComponent implements OnInit {
-  location: string = "";
-  keyword: string = "";
+  
+  searchForm: FormGroup
   jobs: Object[] = []
 
-  constructor(private searchService: SearchBarService) {}
-
-  lookupJobs(city, keyword) {
-    console.log(city, keyword)
-    this.searchService.searchLocation(city, keyword)
-      .subscribe(res => {this.jobs = res.response.results.result, console.log(res)})
+  constructor(private searchService: SearchBarService, private fb: FormBuilder) {
+    this.createForm()
   }
 
   ngOnInit() {
+
   }
+
+  lookupJobs(searchData) {
+    this.searchService.searchLocation(searchData)
+      .subscribe(res => this.jobs = res.json().response.results.result)
+  }
+
+  createForm() {
+    this.searchForm = this.fb.group({
+      location: '',
+      keyword: ''
+    })
+  }
+  
 
 }

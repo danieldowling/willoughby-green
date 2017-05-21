@@ -1,4 +1,4 @@
-import { Http, Response } from "@angular/http";
+import { Http, Response, URLSearchParams } from "@angular/http";
 import { Injectable } from "@angular/core";
 import 'rxjs/Rx';
 
@@ -10,15 +10,12 @@ export class SearchBarService {
 
   constructor (private http: Http) {}
 
-  searchLocation(city,keyword) {
-    return this.http.get(`http://localhost:8080/indeed/${city}/${keyword}`)
-      .map(res => res.json())
-  }
+  searchLocation(searchData) {
+    let params = new URLSearchParams();
+    params.set('location', searchData.location);
+    params.set('keyword', searchData.keyword);
 
-  // searchKeyword(keyword) {
-  //   console.log(keyword);
-  //   return this.http.get(`http://localhost:8080/indeed/${keyword}`)
-  //     .map(res => res.json())
-  // }
+    return this.http.get(`http://localhost:8080/indeed/`, { search: params })
+  }
 
 }

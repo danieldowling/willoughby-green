@@ -1,16 +1,20 @@
 <div class="search-content">
   <div class="search-input">
+
+
+    <form [formGroup]="searchForm" novalidate>
       <div>
         <label for="location">Enter Location</label><br>
-        <input [(ngModel)]=location type="text">
+        <input formControlName="location">
       </div>
       <br>
       <div>
         <label for="keyword">Enter Keyword</label><br>
-        <input [(ngModel)]=keyword type="text">
+        <input formControlName="keyword">
       </div>
       <br>
-      <button type="submit" (click)="lookupJobs(location, keyword)">Search</button>
+      <button type="button" (click)="lookupJobs(searchForm.value)">Search</button>
+    </form>
     </div>
     <div class="search-results">
       <ul>
