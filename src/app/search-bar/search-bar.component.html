@@ -1,7 +1,5 @@
 <div class="search-content">
   <div class="search-input">
-
-
     <form [formGroup]="searchForm" novalidate>
       <div>
         <label for="location">Enter Location</label><br>
@@ -16,13 +14,5 @@
       <button type="button" (click)="lookupJobs(searchForm.value)">Search</button>
     </form>
     </div>
-    <div class="search-results">
-      <ul>
-        <li *ngFor="let job of jobs">
-          <h2>Company: {{job.company}}</h2>
-          <h3>Job Title: {{job.jobtitle}}</h3>
-          <p>Description: {{job.snippet}}</p>
-        </li>
-      </ul>
-    </div>
+
 </div>

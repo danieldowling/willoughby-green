@@ -6,12 +6,11 @@ import { SearchBarService } from './search-bar.service';
   selector: 'app-search-bar',
   templateUrl: './search-bar.component.html',
   styleUrls: ['./search-bar.component.scss'],
-  providers: [SearchBarService]
+  //providers: [SearchBarService]
 })
 export class SearchBarComponent implements OnInit {
-  
+
   searchForm: FormGroup
-  jobs: Object[] = []
 
   constructor(private searchService: SearchBarService, private fb: FormBuilder) {
     this.createForm()
@@ -23,7 +22,6 @@ export class SearchBarComponent implements OnInit {
 
   lookupJobs(searchData) {
     this.searchService.searchLocation(searchData)
-      .subscribe(res => this.jobs = res.json().response.results.result)
   }
 
   createForm() {
@@ -32,6 +30,6 @@ export class SearchBarComponent implements OnInit {
       keyword: ''
     })
   }
-  
+
 
 }

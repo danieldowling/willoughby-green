@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchBarService } from '../search-bar/search-bar.service';
+import { JobComponent } from '../job/job.component'
 
 @Component({
   selector: 'app-jobs-list',
@@ -6,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./jobs-list.component.scss']
 })
 export class JobsListComponent implements OnInit {
-
-  constructor() { }
+jobs: Object[] = this.searchService.jobs
+  constructor(private searchService: SearchBarService) { }
 
   ngOnInit() {
   }

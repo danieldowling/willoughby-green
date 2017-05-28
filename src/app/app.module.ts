@@ -6,6 +6,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppService } from './app.service';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { SearchBarService } from './search-bar/search-bar.service';
 import { JobsListComponent } from './jobs-list/jobs-list.component';
 import { JobComponent } from './job/job.component';
 
@@ -15,7 +16,7 @@ import { JobComponent } from './job/job.component';
     AppComponent,
     SearchBarComponent,
     JobsListComponent,
-    JobComponent,
+    JobComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +27,8 @@ import { JobComponent } from './job/job.component';
     HttpModule
   ],
   providers: [
-    AppService
+    AppService,
+    SearchBarService
   ],
   bootstrap: [AppComponent]
 })
