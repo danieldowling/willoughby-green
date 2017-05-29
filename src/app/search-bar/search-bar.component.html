@@ -1,18 +1,19 @@
 <div class="search-content">
   <div class="search-input">
-    <form [formGroup]="searchForm" novalidate>
-      <div>
-        <label for="location">Enter Location</label><br>
-        <input formControlName="location">
-      </div>
-      <br>
-      <div>
-        <label for="keyword">Enter Keyword</label><br>
-        <input formControlName="keyword">
-      </div>
-      <br>
-      <button type="button" (click)="lookupJobs(searchForm.value)">Search</button>
-    </form>
-    </div>
-
+    <md-card>
+      <form [formGroup]="searchForm" novalidate>
+        <md-input-container>
+          <!-- <label for="location">Enter Location</label><br> -->
+          <input mdInput placeholder="Location" formControlName="location">
+        </md-input-container>
+        <br>
+        <md-input-container>
+          <!--<label for="keyword">Enter Keyword</label><br>-->
+          <input mdInput placeholder="Enter Job" formControlName="keyword">
+        </md-input-container>
+        <br>
+        <button md-button (click)="lookupJobs(searchForm.value)">Search</button>
+      </form>
+    </md-card>
+  </div>
 </div>

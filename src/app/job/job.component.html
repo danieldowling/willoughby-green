@@ -1,5 +1,7 @@
-<li>
-  <h2>Company: {{job.company}}</h2>
-  <h3>Job Title: {{job.jobtitle}}</h3>
-  <p>Description: {{job.snippet}}</p>
-</li>
+<div class="job-content">
+  <md-card>
+    <md-card-title>{{job.company}}</md-card-title>
+    <md-card-subtitle>{{job.jobtitle}}</md-card-subtitle>
+    <md-card-content>{{job.snippet}}</md-card-content>
+  </md-card>
+</div>
