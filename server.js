@@ -6,6 +6,7 @@ var app = express()
 var bodyParser = require('body-parser');
 var request = require('request')
 var http = require('http')
+var https = require('https')
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -25,6 +26,12 @@ app.get('/indeed/',(req, response) => {
   })
 
 })
+
+//http request to get google map api
+// app.get('/google/',(req, response) => {
+//   request(`https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_ID}&callback=initMap`), (err, res, body) => {
+//   }
+// })
 
 app.listen(8080), () => {
     console.log('server running..')

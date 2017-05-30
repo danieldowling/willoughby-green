@@ -9,7 +9,7 @@ import { SearchBarService } from '../search-bar/search-bar.service';
 export class JobComponent implements OnInit {
 @Input() job
   constructor(private searchService: SearchBarService) { }
-
+  
   ngOnInit() {
   }
 
