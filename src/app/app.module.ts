@@ -6,7 +6,6 @@ import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 
-
 import { AppComponent } from './app.component';
 import { AppService } from './app.service';
 import { SearchBarComponent } from './search-bar/search-bar.component';
@@ -36,7 +35,8 @@ import { NumberPipe } from './map/map.pipe';
     MaterialModule,
     BrowserAnimationsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDAPdr16ss-w4LN1hQ4clH-N9pioDCmt8Y'
+      apiKey: 'AIzaSyDAPdr16ss-w4LN1hQ4clH-N9pioDCmt8Y',
+      libraries: ["places"]
     })
   ],
   providers: [

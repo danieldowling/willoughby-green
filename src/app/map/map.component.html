@@ -1,3 +1,6 @@
-<sebm-google-map [latitude]="lat" [longitude]="lng">
+<pre>{{lat|json}}</pre>
+<pre>{{lng|json}}</pre>
+
+<sebm-google-map [usePanning]=true [latitude]="lat | numberPipe" [longitude]="lng | numberPipe">
   <sebm-google-map-marker *ngFor="let job of searchService.jobs" [latitude]="job.latitude | numberPipe" [longitude]="job.longitude | numberPipe"></sebm-google-map-marker>
 </sebm-google-map>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms'
 import { SearchBarService } from './search-bar.service';
 
@@ -9,7 +9,7 @@ import { SearchBarService } from './search-bar.service';
   //providers: [SearchBarService]
 })
 export class SearchBarComponent implements OnInit {
-
+  //@Output() searchClicked = new EventEmitter<any>();
   searchForm: FormGroup
 
   constructor(private searchService: SearchBarService, private fb: FormBuilder) {
@@ -17,7 +17,6 @@ export class SearchBarComponent implements OnInit {
   }
 
   ngOnInit() {
-
   }
 
   lookupJobs(searchData) {

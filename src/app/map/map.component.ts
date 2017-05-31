@@ -1,7 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, NgZone } from '@angular/core';
 import { SearchBarService } from '../search-bar/search-bar.service';
+import { SearchBarComponent } from '../search-bar/search-bar.component';
 import { JobComponent } from '../job/job.component';
-import { AgmCoreModule } from 'angular2-google-maps/core';
+import { AgmCoreModule, MapsAPILoader } from 'angular2-google-maps/core';
 
 @Component({
   selector: 'app-map',
@@ -9,19 +10,28 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
   styleUrls: ['./map.component.scss']
 })
 
-export class MapComponent implements OnInit {
-  lat: number = 30.266483
-  lng: number = -97.74176
-
-  jobs: Object[] = this.searchService.jobs
-  
+export class MapComponent implements OnChanges {
+ lat = 34.020479
+ lng = -118.4117325
   constructor(private searchService: SearchBarService) {
+    this.searchService.lat$.subscribe(
+      (updatedLat) => {
+        this.lat = updatedLat;
+      }),
+    this.searchService.lng$.subscribe(
+      (updatedLng) => {
+        this.lng = updatedLng
+      }
+    )
+    console.log(this.lat)
+    console.log(this.lng)
+    console.log('hello')
   }
 
-  ngOnInit() { 
-    
-      
+  ngOnChanges() {
+    // this.lat = this.searchService.lat
+    // this.lng = this.searchService.lng
 
   }
-   
+
 }
