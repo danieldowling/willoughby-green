@@ -1,15 +1,21 @@
 <body>
+  <md-sidenav-container fullscreen class="side-nav-container">
+    <md-sidenav #sidenav mode="over"> 
+      <app-jobs-list></app-jobs-list>
+    </md-sidenav>
   <div class="header">
     <div class="header-content">
       <h1>
         Job Walker Pro
       </h1>
+      <div class="nav-btn">
+        <button md-fab><i class="material-icons" (click)="sidenav.toggle()">list</i></button>
+      </div>
     </div>
   </div>
-  <app-map ></app-map>
   <div class="main-content">
-    
+    <app-map></app-map>  
     <app-search-bar></app-search-bar>
-    <app-jobs-list></app-jobs-list>
   </div>
+  </md-sidenav-container>
 </body>

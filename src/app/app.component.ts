@@ -1,8 +1,9 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { AppService } from './app.service';
 import { SearchBarService } from './search-bar/search-bar.service';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { JobsListComponent } from './jobs-list/jobs-list.component';
+import { JobComponent } from './job/job.component';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { JobsListComponent } from './jobs-list/jobs-list.component';
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None,
   providers: [SearchBarService],
-  entryComponents: [SearchBarComponent, JobsListComponent]
+  entryComponents: [SearchBarComponent, JobsListComponent, JobComponent]
 })
 
 
@@ -22,5 +23,6 @@ export class AppComponent {
   constructor(private appService: AppService) {
   }
 
+ 
 
 }

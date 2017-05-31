@@ -14,6 +14,7 @@ export class MapComponent implements OnChanges {
  lat = 34.020479
  lng = -118.4117325
   constructor(private searchService: SearchBarService) {
+    //access values saved from searchService, set lat and lng of map equal each time lat/lng changes in searchService
     this.searchService.lat$.subscribe(
       (updatedLat) => {
         this.lat = updatedLat;

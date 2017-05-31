@@ -1,6 +1,20 @@
 .search-content {
-    margin: -540px 10px;
     background-color: white;
-    width: 100%;
     border-radius: 6px;
+    font-family: helvetica neue;
+    min-width: 80%;
 }
+
+.mat-input-element.ng-dirty.ng-touched {
+    color: #694489;
+}
+
+.search-content button {
+     color: #b3b3b3;
+        &:hover {
+        background-color: #e6e6e6;
+        color: #694489;
+        }
+    } 
+
+

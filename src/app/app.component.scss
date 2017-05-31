@@ -8,24 +8,15 @@ body {
     height: 100vh;
 }
 
-.main-content {
-    display: grid;
-    grid-template-columns: 20% 80%;
- 
-}
-
-app-map {
-    justify-self: stretch;
+.app-container {
+    width: 100%;
 }
 
 app-search-bar {
-    grid-column-start: 1;
-    width: 95%;
-    height: 300px;
-}
-
-app-jobs-list {
-    grid-column-start: 2;
+    position: absolute;
+    top: 0;
+    margin-top: 120px;
+    margin-left: 20px;
 }
 
 .header {
@@ -35,6 +26,9 @@ app-jobs-list {
 }
 
 .header-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 90% 10%;
     color: #694489;
     background-color: white;
     padding-left: 20px;
@@ -45,6 +39,27 @@ app-jobs-list {
 .header-content h1 {
     font-family: helvetica neue;
     font-weight: 200;
+}
+
+.material-icons {
+    line-height: 0px !important;
+}
+
+.mat-fab {
+    color: white;
+    background-color: #694489;
+    height: 66% !important;
+    width: 34% !important;
+    border-radius: 20% !important;
+}
+
+.side-nav-container {
+    width: 100%;
+    border: 1px solid black;
+}
+
+md-sidenav {
+    width: 50% !important;
 }
 
 

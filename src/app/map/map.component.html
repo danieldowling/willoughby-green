@@ -1,6 +1,14 @@
-<pre>{{lat|json}}</pre>
-<pre>{{lng|json}}</pre>
-
 <sebm-google-map [usePanning]=true [latitude]="lat | numberPipe" [longitude]="lng | numberPipe">
-  <sebm-google-map-marker *ngFor="let job of searchService.jobs" [latitude]="job.latitude | numberPipe" [longitude]="job.longitude | numberPipe"></sebm-google-map-marker>
+  <sebm-google-map-marker *ngFor="let job of searchService.jobs" [latitude]="job.latitude | numberPipe" [longitude]="job.longitude | numberPipe">
+    <sebm-google-map-info-window [disableAutoPan]="true">
+      <div class="job-content">
+        <md-card>
+        <md-card-title>{{job.company}}</md-card-title>
+        <md-card-subtitle>{{job.jobtitle}}</md-card-subtitle>
+        <md-card-content>{{job.snippet}}</md-card-content>
+        <md-card-content><a href={{job.url}}>View Details</a></md-card-content>
+        <span id="indeed_at"><a title="Job Search" href="https://www.indeed.com" rel="nofollow" >jobs by <img alt=Indeed src="https://www.indeed.com/p/jobsearch.gif" style="border: 0; vertical-align: middle;"></a></span>
+      </md-card>
+    </div></sebm-google-map-info-window>
+  </sebm-google-map-marker>
 </sebm-google-map>
