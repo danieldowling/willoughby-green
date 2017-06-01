@@ -15,7 +15,7 @@ body {
 app-search-bar {
     position: absolute;
     top: 0;
-    margin-top: 120px;
+    margin-top: 100px;
     margin-left: 20px;
 }
 
@@ -23,12 +23,12 @@ app-search-bar {
     background-color: #694489;
     height: 50px;
     padding-top: 6px;
+    width: 100%;
 }
 
 .header-content {
-    width: 100%;
     display: grid;
-    grid-template-columns: 90% 10%;
+    grid-template-columns: 92% 8%;
     color: #694489;
     background-color: white;
     padding-left: 20px;
@@ -49,7 +49,7 @@ app-search-bar {
     color: white;
     background-color: #694489;
     height: 66% !important;
-    width: 34% !important;
+    //width: 34% !important;
     border-radius: 20% !important;
 }
 

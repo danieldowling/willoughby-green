@@ -14,6 +14,7 @@ import { JobsListComponent } from './jobs-list/jobs-list.component';
 import { JobComponent } from './job/job.component';
 import { MapComponent } from './map/map.component';
 import { NumberPipe } from './map/map.pipe';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -35,7 +36,7 @@ import { NumberPipe } from './map/map.pipe';
     MaterialModule,
     BrowserAnimationsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDAPdr16ss-w4LN1hQ4clH-N9pioDCmt8Y',
+      apiKey: environment.google,
       libraries: ["places"]
     })
   ],
