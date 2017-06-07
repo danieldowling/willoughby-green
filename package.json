@@ -5,7 +5,7 @@
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
-    "start": "node serve",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -45,9 +45,6 @@
     "typescript": "^2.3.3",
     "xml2json": "^0.11.0",
     "zone.js": "^0.8.11",
-    "@types/jasmine": "2.5.38",
-    "@types/googlemaps": "^3.26.11",
-    "@types/node": "^6.0.42",
     "node-sass": "^4.5.2"
   },
   "devDependencies": {
