@@ -7,6 +7,9 @@ var bodyParser = require('body-parser');
 var request = require('request')
 var http = require('http')
 var https = require('https')
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
