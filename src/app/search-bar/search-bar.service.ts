@@ -2,6 +2,7 @@ import { Http, Response, URLSearchParams } from "@angular/http";
 import { Injectable, Output, EventEmitter } from "@angular/core";
 import 'rxjs/Rx';
 import { Subject } from "rxjs/Subject";
+import { environment } from "../../environments/environment";
 
 @Injectable()
 export class SearchBarService {
@@ -16,13 +17,13 @@ export class SearchBarService {
   //create observables
   lat$ = this.lat.asObservable();
   lng$ = this.lng.asObservable(); 
-  
   jobs: Object[] = [];
   
   searchLocation(searchData) {
     let params = new URLSearchParams();
     params.set('location', searchData.location);
     params.set('keyword', searchData.keyword); 
+    params.set('indeed', environment.indeed);
     return this.http.get(`/indeed/`, { search: params })
       .subscribe(res => {
         //set value of jobs, lat, and lng
