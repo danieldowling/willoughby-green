@@ -23,7 +23,6 @@ export class SearchBarService {
     let params = new URLSearchParams();
     params.set('location', searchData.location);
     params.set('keyword', searchData.keyword); 
-    params.set('indeed', environment.indeed);
     return this.http.get(`/indeed/`, { search: params })
       .subscribe(res => {
         //set value of jobs, lat, and lng
