@@ -24,9 +24,9 @@ export class MapComponent implements OnChanges {
         this.lng = updatedLng
       }
     )
-    console.log(this.lat)
-    console.log(this.lng)
-    console.log('hello')
+    //console.log(this.lat)
+    //console.log(this.lng)
+    //console.log('hello')
   }
 
   ngOnChanges() {

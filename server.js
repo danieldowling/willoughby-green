@@ -7,8 +7,8 @@ var bodyParser = require('body-parser');
 var request = require('request')
 var http = require('http')
 var https = require('https')
-var distDir = __dirname + "/dist/";
-app.use(express.static(distDir));
+// var distDir = __dirname + "/dist/";
+// app.use(express.static(distDir));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -30,13 +30,13 @@ app.get('/indeed/',(req, response) => {
 
 })
 
- var server = app.listen(process.env.PORT || 8080, function () {
-    var port = server.address().port;
-    console.log("App now running on port", port);
-  });
+//  var server = app.listen(process.env.PORT || 8080, function () {
+//     var port = server.address().port;
+//     console.log("App now running on port", port);
+//   });
 
-// app.listen(process.env.PORT || 8080), () => {
-//     console.log('server running..')
-// }
+app.listen(process.env.PORT || 8080), () => {
+    console.log('server running..')
+}
 
 module.exports = app;
