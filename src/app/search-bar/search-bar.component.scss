@@ -2,7 +2,6 @@
     background-color: white;
     border-radius: 6px;
     font-family: helvetica neue;
-    min-width: 80%;
 }
 
 .mat-input-element.ng-dirty.ng-touched {
@@ -10,11 +9,13 @@
 }
 
 .search-content button {
-     color: #b3b3b3;
+    color: #b3b3b3;
+    height: 32px;
+    margin-left: 6px;
         &:hover {
-        background-color: #e6e6e6;
-        color: #694489;
-        }
-    } 
+            background-color: #e6e6e6;
+            color: #694489;
+        }   
+} 
 
 

@@ -12,23 +12,16 @@ body {
     width: 100%;
 }
 
-app-search-bar {
-    position: absolute;
-    top: 0;
-    margin-top: 100px;
-    margin-left: 20px;
-}
-
 .header {
     background-color: #694489;
-    height: 50px;
+    height: 54px;
     padding-top: 6px;
-    width: 100%;
+    //width: 100%;
 }
 
 .header-content {
     display: grid;
-    grid-template-columns: 92% 8%;
+    grid-template-columns: 56% 36% 4% 4%;
     color: #694489;
     background-color: white;
     padding-left: 20px;
@@ -41,17 +34,27 @@ app-search-bar {
     font-weight: 200;
 }
 
+.header-content button {
+    height: 32px;
+    margin-top: 10px;
+    color: #b3b3b3;
+    &:hover {
+        background-color: #e6e6e6;
+        color: #694489;
+    }
+}   
+
 .material-icons {
-    line-height: 0px !important;
+    line-height: 10px !important;
 }
 
-.mat-fab {
-    color: white;
-    background-color: #694489;
-    height: 66% !important;
-    //width: 34% !important;
-    border-radius: 20% !important;
-}
+// .mat-fab {
+//     color: white;
+//     background-color: #694489;
+//     height: 72% !important;
+//     //width: 34% !important;
+//     border-radius: 20% !important;
+// }
 
 .side-nav-container {
     width: 100%;

@@ -8,12 +8,12 @@
       <h1>
         Job Walker Pro
       </h1>
-        <button md-fab><i class="material-icons" (click)="sidenav.toggle()">list</i></button>
+      <app-search-bar></app-search-bar>
+      <button md-raised-button><i class="material-icons" (click)="sidenav.toggle()">list</i></button>
     </div>
   </div>
   <div class="main-content">
     <app-map></app-map>  
-    <app-search-bar></app-search-bar>
   </div>
   </md-sidenav-container>
 </body>
