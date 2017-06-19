@@ -16,15 +16,17 @@ body {
     background-color: #694489;
     height: 54px;
     padding-top: 6px;
-    //width: 100%;
+    padding-bottom: 2px;
+    display: block;
 }
 
 .header-content {
-    display: grid;
-    grid-template-columns: 56% 36% 4% 4%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     color: #694489;
     background-color: white;
-    padding-left: 20px;
+    //padding-left: 20px;
     padding-top: 6px;
     height: 50px;
 }
@@ -32,6 +34,7 @@ body {
 .header-content h1 {
     font-family: helvetica neue;
     font-weight: 200;
+    margin-right: 152px;
 }
 
 .header-content button {
@@ -42,19 +45,25 @@ body {
         background-color: #e6e6e6;
         color: #694489;
     }
-}   
+} 
 
-.material-icons {
-    line-height: 10px !important;
+.search-content {
+    order: 1;
+    background-color: white;
+    font-family: helvetica neue;
+    z-index: 1;
+    padding-bottom: 10px;
 }
 
-// .mat-fab {
-//     color: white;
-//     background-color: #694489;
-//     height: 72% !important;
-//     //width: 34% !important;
-//     border-radius: 20% !important;
-// }
+.search-content button {
+    color: #b3b3b3;
+    height: 32px;
+    margin-left: 20px;
+        &:hover {
+            background-color: #e6e6e6;
+            color: #694489;
+        }   
+} 
 
 .side-nav-container {
     width: 100%;
@@ -65,9 +74,10 @@ md-sidenav {
     width: 50% !important;
 }
 
-#menu-button {
-    display: hidden;
-	width: 40px;
-	height: 40px;
+.material-icons {
+    line-height: 10px !important;
 }
 
+.mat-input-container {
+    padding-left: 8px;
+}

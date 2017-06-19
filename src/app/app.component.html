@@ -3,17 +3,25 @@
     <md-sidenav #sidenav mode="over"> 
       <app-jobs-list></app-jobs-list>
     </md-sidenav>
+
+  <div class="app-content">
+
   <div class="header">
     <div class="header-content">
-      <h1>
-        Job Walker Pro
-      </h1>
+      <div>
+        <h1>Job Walker Pro</h1>
+      </div>
+    
+    <div class="search-content">
       <app-search-bar></app-search-bar>
-      <button md-raised-button><i class="material-icons" (click)="sidenav.toggle()">list</i></button>
+    </div>
     </div>
   </div>
+  
   <div class="main-content">
     <app-map></app-map>  
+  </div>
+
   </div>
   </md-sidenav-container>
 </body>

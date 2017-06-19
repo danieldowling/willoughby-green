@@ -1,12 +1,11 @@
-<div id="menu-icon"></div>
-<div class="search-content">
-  <form [formGroup]="searchForm" novalidate>
-    <md-input-container>
-      <input mdInput placeholder="Location" formControlName="location">
-    </md-input-container>
-    <md-input-container>
-      <input mdInput placeholder="Enter Job" formControlName="keyword">
-    </md-input-container>
-    <button md-raised-button (click)="lookupJobs(searchForm.value)">Search</button>
-  </form>
-</div>
+<form [formGroup]="searchForm" novalidate>
+  <md-input-container>
+    <input mdInput placeholder="Location" formControlName="location">
+  </md-input-container>
+  <md-input-container>
+    <input mdInput placeholder="Enter Job" formControlName="keyword">
+  </md-input-container>
+  <button md-raised-button (click)="lookupJobs(searchForm.value)">Search</button>
+  <button md-raised-button><i class="material-icons" (click)="sidenav.toggle()">list</i></button> 
+</form>
+

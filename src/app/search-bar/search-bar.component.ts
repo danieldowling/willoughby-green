@@ -9,7 +9,7 @@ import { SearchBarService } from './search-bar.service';
   //providers: [SearchBarService]
 })
 export class SearchBarComponent implements OnInit {
-  //@Output() searchClicked = new EventEmitter<any>();
+  //@Output() sidenavClicked = new EventEmitter<any>();
   searchForm: FormGroup
 
   constructor(private searchService: SearchBarService, private fb: FormBuilder) {
