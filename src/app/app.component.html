@@ -1,27 +1,11 @@
 <body>
-  <md-sidenav-container fullscreen class="side-nav-container">
-    <md-sidenav #sidenav mode="over"> 
-      <app-jobs-list></app-jobs-list>
-    </md-sidenav>
-
   <div class="app-content">
-
-  <div class="header">
-    <div class="header-content">
-      <div>
+    <div class="header">
+      <div class="header-content">
         <h1>Job Walker Pro</h1>
+        <app-search-bar></app-search-bar>   
       </div>
-    
-    <div class="search-content">
-      <app-search-bar></app-search-bar>
-    </div>
+      <app-map></app-map>
     </div>
   </div>
-  
-  <div class="main-content">
-    <app-map></app-map>  
-  </div>
-
-  </div>
-  </md-sidenav-container>
 </body>

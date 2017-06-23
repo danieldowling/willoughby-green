@@ -2,5 +2,34 @@
     color: #694489;
 }
 
+md-sidenav {
+    width: 50% !important;
+}
 
+.side-nav-container {
+    width: 100%;
+}
 
+.mat-sidenav-container {
+    background: none !important;
+}
+
+.search-form {
+    order: 2;
+    width: 50%;
+    margin-left: 50%;
+    padding-top: 14px;
+}
+
+.mat-input-container {
+    padding-left: 8px;
+    margin-right: 26px;
+}
+
+.mat-sidenav.mat-sidenav-closed {
+    z-index: 0;
+}
+
+.mat-sidenav-container[fullscreen].mat-sidenav-opened {
+    z-index: 1;
+}

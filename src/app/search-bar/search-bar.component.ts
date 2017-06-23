@@ -6,17 +6,24 @@ import { SearchBarService } from './search-bar.service';
   selector: 'app-search-bar',
   templateUrl: './search-bar.component.html',
   styleUrls: ['./search-bar.component.scss'],
-  //providers: [SearchBarService]
 })
 export class SearchBarComponent implements OnInit {
-  //@Output() sidenavClicked = new EventEmitter<any>();
+  @Output() sidenavClicked = new EventEmitter<any>();
+
+  
+
   searchForm: FormGroup
+  
 
   constructor(private searchService: SearchBarService, private fb: FormBuilder) {
     this.createForm()
   }
 
   ngOnInit() {
+  }
+
+ toggle(button) {
+    this.sidenavClicked.emit(button)
   }
 
   lookupJobs(searchData) {
@@ -29,6 +36,5 @@ export class SearchBarComponent implements OnInit {
       keyword: ''
     })
   }
-
 
 }

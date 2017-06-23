@@ -20,6 +20,10 @@ export class AppComponent {
   title = 'app works!';
   private person: string = ''
 
+   sidenavClicked($event){
+      console.log(1, $event);
+    }
+
   constructor(private appService: AppService) {
   }
 

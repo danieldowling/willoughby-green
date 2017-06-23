@@ -1,11 +1,18 @@
-<form [formGroup]="searchForm" novalidate>
-  <md-input-container>
-    <input mdInput placeholder="Location" formControlName="location">
-  </md-input-container>
-  <md-input-container>
-    <input mdInput placeholder="Enter Job" formControlName="keyword">
-  </md-input-container>
-  <button md-raised-button (click)="lookupJobs(searchForm.value)">Search</button>
-  <button md-raised-button><i class="material-icons" (click)="sidenav.toggle()">list</i></button> 
-</form>
+<md-sidenav-container fullscreen class="side-nav-container">
+<md-sidenav #sidenav mode="over" (sidenavClicked)="sidenavClicked($event)"> 
+      <app-jobs-list></app-jobs-list>
+</md-sidenav>
 
+<div class="search-form">
+  <form [formGroup]="searchForm" novalidate>
+    <md-input-container>
+      <input mdInput placeholder="Location" formControlName="location">
+    </md-input-container>
+    <md-input-container>
+      <input mdInput placeholder="Enter Job" formControlName="keyword">
+    </md-input-container>
+    <button md-raised-button (click)="lookupJobs(searchForm.value)">Search</button>
+    <button md-raised-button (click)="sidenav.toggle($event)"><i class="material-icons">list</i></button> 
+  </form>
+</div>
+</md-sidenav-container>
