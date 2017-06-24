@@ -14,17 +14,10 @@ md-sidenav {
     background: none !important;
 }
 
-.search-form {
-    order: 2;
-    width: 50%;
-    margin-left: 50%;
-    padding-top: 14px;
-}
-
-.mat-input-container {
-    padding-left: 8px;
-    margin-right: 26px;
-}
+// .mat-input-container {
+//     padding-left: 8px;
+//     margin-right: 26px;
+// }
 
 .mat-sidenav.mat-sidenav-closed {
     z-index: 0;
@@ -32,4 +25,39 @@ md-sidenav {
 
 .mat-sidenav-container[fullscreen].mat-sidenav-opened {
     z-index: 1;
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 6px solid #694489;
+    padding-top: 18px;
+    background-color: #fff;
+}
+
+.search h1 {
+    padding-top: 6px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-family: helvetica neue;
+    font-weight: 200;
+    color: #694489;
+}
+
+.search button {
+    height: 32px;
+    margin-top: 10px;
+    color: #b3b3b3;
+    &:hover {
+        background-color: #e6e6e6;
+        color: #694489;
+    }
+} 
+
+.search-form {
+    padding-right: 18px;
+    min-width: 40%;
+    padding-left: 10px;
+    padding-bottom: 10px;
 }

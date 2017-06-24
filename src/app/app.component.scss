@@ -12,48 +12,39 @@ body {
     width: 100%;
 }
 
-.header {
-    background-color: #fff;
-    height: 54px;
-    padding-top: 6px;
-    padding-bottom: 2px;
-    display: flex;
-    flex-wrap: wrap;
-    border-top: 6px solid #694489;
-    width: 100%;
-}
+// .header {
+//     height: 54px;
+//     padding-top: 6px;
+//     padding-bottom: 2px;
+//     width: 100%;
+//     color: #694489;
+// }
 
-.header-content {
-    color: #694489;
-    background-color: white;
-    padding-top: 6px;
-    height: 50px;
-}
+// .header-content {
+//     //display: flex;
+//     //justify-content: space-between;
+    
+//     background-color: white;
+//     padding-top: 6px;
+//     height: 50px;
+// }
 
-.header-content h1 {
-    padding-left: 20px;
-    font-family: helvetica neue;
-    font-weight: 200;
-}
 
-.header-content button {
-    height: 32px;
-    margin-top: 10px;
-    color: #b3b3b3;
-    &:hover {
-        background-color: #e6e6e6;
-        color: #694489;
-    }
-} 
+
+// .header button {
+//     height: 32px;
+//     margin-top: 10px;
+//     color: #b3b3b3;
+//     &:hover {
+//         background-color: #e6e6e6;
+//         color: #694489;
+//     }
+// } 
 
 app-search-bar {
-    background-color: white;
+    background-color: #fff;
     font-family: helvetica neue;
     padding-bottom: 10px; 
-}
-
-app-map {
-    width: 100%;
 }
 
 .material-icons {
