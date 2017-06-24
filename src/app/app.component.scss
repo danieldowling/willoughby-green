@@ -12,34 +12,6 @@ body {
     width: 100%;
 }
 
-// .header {
-//     height: 54px;
-//     padding-top: 6px;
-//     padding-bottom: 2px;
-//     width: 100%;
-//     color: #694489;
-// }
-
-// .header-content {
-//     //display: flex;
-//     //justify-content: space-between;
-    
-//     background-color: white;
-//     padding-top: 6px;
-//     height: 50px;
-// }
-
-
-
-// .header button {
-//     height: 32px;
-//     margin-top: 10px;
-//     color: #b3b3b3;
-//     &:hover {
-//         background-color: #e6e6e6;
-//         color: #694489;
-//     }
-// } 
 
 app-search-bar {
     background-color: #fff;
@@ -50,21 +22,3 @@ app-search-bar {
 .material-icons {
     line-height: 10px !important;
 }
-
-// .search-content {
-//     order: 1;
-//     background-color: white;
-//     font-family: helvetica neue;
-//     z-index: 1;
-//     padding-bottom: 10px;
-// }
-
-// .search-content button {
-//     color: #b3b3b3;
-//     height: 32px;
-//     margin-left: 20px;
-//         &:hover {
-//             background-color: #e6e6e6;
-//             color: #694489;
-//         }   
-// } 
