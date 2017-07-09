@@ -20,14 +20,12 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 export class AppComponent {
   title = 'app works!';
   private person: string = '';
-  items: FirebaseListObservable<any[]>;
 
    sidenavClicked($event){
       console.log(1, $event);
     }
 
-  constructor(private appService: AppService, private db: AngularFireDatabase) {
-    this.items = db.list('/items');
+  constructor(private appService: AppService) {
   }
 
 
