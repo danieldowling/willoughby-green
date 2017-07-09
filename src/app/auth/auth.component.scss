@@ -1,0 +1,18 @@
+.auth {
+    display: flex;
+    color: #694489;
+}
+
+.auth button {
+    color: #b3b3b3;
+    padding: 4px;
+    margin-left: 4px;
+        &:hover {
+        color: #694489;
+    }
+}
+
+.username {
+    padding-right: 4px;
+    padding-left: 10px;
+}

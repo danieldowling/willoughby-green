@@ -5,6 +5,9 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AgmCoreModule } from 'angular2-google-maps/core';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AppComponent } from './app.component';
 import { AppService } from './app.service';
@@ -15,6 +18,7 @@ import { JobComponent } from './job/job.component';
 import { MapComponent } from './map/map.component';
 import { NumberPipe } from './map/map.pipe';
 import { environment } from '../environments/environment';
+import { AuthComponent } from './auth/auth.component';
 
 
 @NgModule({
@@ -24,7 +28,8 @@ import { environment } from '../environments/environment';
     JobsListComponent,
     JobComponent,
     MapComponent,
-    NumberPipe
+    NumberPipe,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +40,9 @@ import { environment } from '../environments/environment';
     HttpModule,
     MaterialModule,
     BrowserAnimationsModule,
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(environment.firebase),
     AgmCoreModule.forRoot({
       apiKey: environment.google,
       libraries: ["places"]

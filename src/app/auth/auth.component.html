@@ -1,0 +1,5 @@
+  <div class="auth">
+    <div class="username"> {{ (user | async)?.displayName }} </div>
+    <button (click)="login()">Login</button>
+    <button (click)="logout()">Logout</button>
+  </div>

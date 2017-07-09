@@ -4,6 +4,7 @@ import { SearchBarService } from './search-bar/search-bar.service';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { JobsListComponent } from './jobs-list/jobs-list.component';
 import { JobComponent } from './job/job.component';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 
 @Component({
@@ -18,15 +19,16 @@ import { JobComponent } from './job/job.component';
 
 export class AppComponent {
   title = 'app works!';
-  private person: string = ''
+  private person: string = '';
+  items: FirebaseListObservable<any[]>;
 
    sidenavClicked($event){
       console.log(1, $event);
     }
 
-  constructor(private appService: AppService) {
+  constructor(private appService: AppService, private db: AngularFireDatabase) {
+    this.items = db.list('/items');
   }
 
- 
 
 }
