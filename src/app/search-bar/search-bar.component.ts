@@ -8,9 +8,7 @@ import { SearchBarService } from './search-bar.service';
   styleUrls: ['./search-bar.component.scss'],
 })
 export class SearchBarComponent implements OnInit {
-  @Output() sidenavClicked = new EventEmitter<any>();
-
-  
+  @Output() sidenavClicked
 
   searchForm: FormGroup
   

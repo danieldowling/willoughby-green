@@ -10,7 +10,7 @@ import { JobComponent } from '../job/job.component'
 export class JobsListComponent implements OnInit {
 jobs: Object[] = this.searchService.jobs
 
-  constructor(private searchService: SearchBarService) { }
+  constructor(public searchService: SearchBarService) { }
 
   ngOnInit() {
   }
