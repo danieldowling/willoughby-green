@@ -7,6 +7,7 @@ import { environment } from "../../environments/environment";
 @Injectable()
 export class SearchBarService {
 
+
   location: string = "";
   keyword: string = "";
 
