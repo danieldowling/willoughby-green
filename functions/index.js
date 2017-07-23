@@ -1,6 +1,10 @@
 var express = require('express')
 const functions = require('firebase-functions');
 var app = express();
+var bodyParser = require('body-parser');
+var http = require('http');
+var https = require('https');
+var parser = require('xml2json')
 
 exports.indeed = functions.https.onRequest((req, res) =>{
     app.use(bodyParser.json());
