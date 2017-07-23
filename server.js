@@ -8,6 +8,7 @@ var request = require('request')
 var http = require('http')
 var https = require('https')
 var functions = require('firebase-functions')
+var config = functions.config();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
