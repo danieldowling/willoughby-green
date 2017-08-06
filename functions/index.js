@@ -14,7 +14,7 @@ var jobFn = function jobFn(req, res) {
 };
 
 //CORS & CloudFunction
-exports.indeed = functions.https.indeed((req, res) => {
+exports.indeed = functions.https.onRequest((req, res) => {
   var corsFn = cors();
   corsFn(req, res, function() {
     jobFn(req, res);
