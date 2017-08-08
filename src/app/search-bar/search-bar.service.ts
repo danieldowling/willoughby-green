@@ -24,7 +24,7 @@ export class SearchBarService {
     let params = new URLSearchParams();
     params.set('location', searchData.location);
     params.set('keyword', searchData.keyword);
-    return this.http.get(`https://us-central1-jobwalkerpro.cloudfunctions.net/indeed/`, { search: params })
+    return this.http.get(`http://localhost:8080/indeed/`, { search: params })
       .subscribe(res => {
         // set value of jobs, lat, and lng
         console.log(res)
